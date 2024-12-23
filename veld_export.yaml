@@ -1,0 +1,21 @@
+x-veld:
+  chain:
+
+
+services:
+  veld_export:
+    extends:
+      file: ./code/veld_code__apache_jena_fuseki/veld_export.yaml
+      service: veld_export
+    volumes:
+      - ./data/queries/:/veld/input/
+      - ./data/fuseki_export/:/veld/output/
+    environment:
+      in_query_file: german_books_txt_no_tei.rq
+      out_file: german_books_txt_no_tei.csv
+      out_format: csv
+      fuseki_dataset_name: gutenberg
+
+networks:
+  veld_fuseki:
+

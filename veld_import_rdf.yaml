@@ -1,0 +1,16 @@
+x-veld:
+  chain:
+
+services:
+  veld_import_rdf:
+    extends:
+      file: ./code/veld_code__apache_jena_fuseki/veld_import_rdf.yaml
+      service: veld_import_rdf
+    volumes:
+      - ./data/gutenberg_rdf/rdf-files/cache/epub/:/veld/input/
+    environment:
+      fuseki_dataset_name: gutenberg
+
+networks:
+  veld_fuseki:
+
