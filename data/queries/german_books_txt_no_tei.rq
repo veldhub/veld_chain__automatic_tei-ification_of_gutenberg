@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX terms: <http://purl.org/dc/terms/>
+PREFIX pgterms: <http://www.gutenberg.org/2009/pgterms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+SELECT DISTINCT ?download_link ?download_file_name WHERE {
+  ?lang rdf:value "de"^^terms:RFC4646 .
+  ?book_uri terms:language ?lang .
+  ?book_uri terms:creator ?agent .
+  ?book_uri terms:hasFormat ?download_link .
+  BIND(
+    CONCAT(
+      "gutenberg__",
+      "book-id-",
+      REPLACE(STR(?book_uri), "^.*[#/]", ""),
+      "__",
+      "creator-id-",
+      REPLACE(STR(?agent), "^.*[#/]", ""),
+      ".txt"
+    )
+    AS ?download_file_name
+  ) .
+  BIND(REPLACE(STR(?book_uri), "^.*[#/]", "") AS ?id)
+  BIND(xsd:integer(?id) AS ?id_as_int)
+  FILTER(STRENDS(STR(?download_link), ".txt.utf-8"))
+  FILTER NOT EXISTS {
+    ?book_uri terms:hasFormat ?format .
+    FILTER(STRENDS(STR(?format), "tei")) .
+  }
+}
+ORDER BY ?id_as_int
