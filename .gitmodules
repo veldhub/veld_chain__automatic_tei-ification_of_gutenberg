@@ -1,0 +1,6 @@
+[submodule "code/veld_code__apache_jena_fuseki"]
+	path = code/veld_code__apache_jena_fuseki
+	url = https://github.com/veldhub/veld_code__apache_jena_fuseki.git
+[submodule "code/veld_code__downloader"]
+	path = code/veld_code__downloader
+	url = https://github.com/veldhub/veld_code__downloader.git
