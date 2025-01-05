@@ -1,0 +1,14 @@
+x-veld:
+  chain:
+
+services:
+  veld_download_gutenberg_books:
+    extends:
+      file: ./code/veld_code__downloader/veld.yaml
+      service: veld_downloader
+    volumes:
+      - ./data/fuseki_export/:/veld/input/
+      - ./data/gutenberg_books/:/veld/output/
+    environment:
+      in_csv_file: german_books_txt_no_tei.csv
+
