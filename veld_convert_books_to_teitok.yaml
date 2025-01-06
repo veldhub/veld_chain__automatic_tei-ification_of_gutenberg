@@ -1,0 +1,15 @@
+x-veld:
+  chain:
+
+services:
+  veld_convert_books_to_teitok:
+    extends:
+      file: ./code/veld_code__teitok-tools/veld_udpipe2teitok.yaml
+      service: veld_udpipe2teitok
+    volumes:
+      - ./data/gutenberg_books/:/veld/input/
+      - ./data/gutenberg_teitok:/veld/output/
+    environment:
+      lang: de
+      model: german-hdt-ud-2.6-200830
+
