@@ -99,7 +99,7 @@ used as input for downloading the book's txt files within this step. The books c
 
 Reproduce with:
 ```
-docker compose -f veld_step5_download_gutenberg_books up
+docker compose -f veld_step5_download_gutenberg_books.yaml up
 ```
 
 
