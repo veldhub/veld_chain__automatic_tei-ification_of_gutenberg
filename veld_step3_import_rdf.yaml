@@ -9,6 +9,7 @@ services:
     volumes:
       - ./data/gutenberg_rdf/rdf-files/cache/epub/:/veld/input/
     environment:
+      fuseki_server_url: http://veld_step2_run_server
       fuseki_dataset_name: gutenberg
 
 networks:
