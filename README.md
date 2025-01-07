@@ -41,7 +41,7 @@ metadata is downloaded into [./data/gutenberg_rdf/](./data/gutenberg_rdf/)
 
 Reproduce with:
 ```
-docker -f veld_step1_download_gutenberg_metadata.yaml up
+docker compose-f veld_step1_download_gutenberg_metadata.yaml up
 ```
 
 
@@ -56,7 +56,7 @@ this, a triplestore is started in this step. Configuration for the server can be
 
 Reproduce with:
 ```
-docker -f veld_step2_run_server.yaml up
+docker compose-f veld_step2_run_server.yaml up
 ```
 
 
@@ -69,7 +69,7 @@ this step can take a long time (on a AMD Ryzen 7 4800H it took 11 hours).
 
 Reproduce with:
 ```
-docker -f veld_step3_import_rdf.yaml up
+docker compose-f veld_step3_import_rdf.yaml up
 ```
 
 
@@ -84,7 +84,7 @@ output is saved as csv file in [./data/fuseki_export/](./data/fuseki_export/)
 
 Reproduce with:
 ```
-docker -f veld_step4_query_books_urls.yaml up
+docker compose-f veld_step4_query_books_urls.yaml up
 ```
 
 
@@ -98,7 +98,7 @@ used as input for downloading the book's txt files within this step. The books c
 
 Reproduce with:
 ```
-docker -f veld_step5_download_gutenberg_books up
+docker compose-f veld_step5_download_gutenberg_books up
 ```
 
 
@@ -121,6 +121,6 @@ reflected in this multichain. For more details, see
 
 Reproduce the entire data processing with:
 ```
-docker -f veld_multichain_all.yaml up
+docker compose-f veld_multichain_all.yaml up
 ```
 
