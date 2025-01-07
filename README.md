@@ -52,7 +52,8 @@ docker compose -f veld_step1_download_gutenberg_metadata.yaml up
 Querying the data is done via a apache fuseki triplestore, since sparql can adapt to the data's 
 complexity and also allows for high flexibility should query requirements change at some point. For 
 this, a triplestore is started in this step. Configuration for the server can be found in
-[./data/fuseki_config/](./data/fuseki_config/)
+[./data/fuseki_config/](./data/fuseki_config/). The server can be reached at 
+[http://localhost:3030](http://localhost:3030)
 
 Reproduce with:
 ```
