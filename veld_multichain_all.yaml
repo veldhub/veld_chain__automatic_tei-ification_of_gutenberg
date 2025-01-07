@@ -6,12 +6,12 @@ services:
   veld_step1_download_gutenberg_metadata:
     extends:
       file: ./veld_step1_download_gutenberg_metadata.yaml
-      service: veld_download_gutenberg_metadata
+      service: veld_step1_download_gutenberg_metadata
   
   veld_step2_run_server:
     extends:
       file: ./veld_step2_run_server.yaml
-      service: veld_run_server
+      service: veld_step2_run_server
     depends_on:
       veld_step1_download_gutenberg_metadata:
         condition: service_completed_successfully
@@ -19,7 +19,7 @@ services:
   veld_step3_import_rdf:
     extends:
       file: ./veld_step3_import_rdf.yaml
-      service: veld_import_rdf
+      service: veld_step3_import_rdf
     depends_on:
       veld_step2_run_server:
         condition: service_healthy
@@ -27,7 +27,7 @@ services:
   veld_step4_query_books_urls:
     extends:
       file: ./veld_step4_query_books_urls.yaml
-      service: veld_query_books_urls
+      service: veld_step4_query_books_urls
     depends_on:
       veld_step3_import_rdf:
         condition: service_completed_successfully
@@ -35,7 +35,7 @@ services:
   veld_step5_download_gutenberg_books:
     extends:
       file: ./veld_step5_download_gutenberg_books.yaml
-      service: veld_download_gutenberg_books
+      service: veld_step5_download_gutenberg_books
     depends_on:
       veld_step4_query_books_urls:
         condition: service_completed_successfully
