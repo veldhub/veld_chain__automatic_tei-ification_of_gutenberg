@@ -1,5 +1,10 @@
 x-veld:
   chain:
+    description: "An Apache Fuseki instance storing the entire gutenberg metadata."
+    topic:
+      - RDF
+      - triplestore
+      - database
 
 services:
   veld_step2_run_server:

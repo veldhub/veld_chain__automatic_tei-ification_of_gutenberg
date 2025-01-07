@@ -1,6 +1,12 @@
 x-veld:
   chain:
-
+    description: "Exports a csv file containing download links and file names of all german books 
+      that have no TEI files, but a txt, which will be used for automatic TEI generation further 
+      downstream."
+    topic:
+      - ETL
+      - RDF
+      - triplestore
 
 services:
   veld_step4_query_books_urls:
@@ -11,10 +17,10 @@ services:
       - ./data/queries/:/veld/input/
       - ./data/fuseki_export/:/veld/output/
     environment:
-      fuseki_server_url: http://veld_step2_run_server
       in_query_file: german_books_txt_no_tei.rq
       out_file: german_books_txt_no_tei.csv
       out_format: csv
+      fuseki_server_url: http://veld_step2_run_server
       fuseki_dataset_name: gutenberg
 
 networks:

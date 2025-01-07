@@ -1,5 +1,8 @@
 x-veld:
   chain:
+    description: "Downlaods all german books without TEI, as designated by the previously generated 
+      csv."
+    topic: ETL
 
 services:
   veld_step5_download_gutenberg_books:

@@ -1,5 +1,10 @@
 x-veld:
   chain:
+    description: "imports the gutenberg metadata into the Fuseki triplestore."
+    topic:
+      - ETL
+      - RDF
+      - triplestore
 
 services:
   veld_step3_import_rdf:

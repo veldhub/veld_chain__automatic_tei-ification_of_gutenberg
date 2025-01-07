@@ -1,5 +1,14 @@
 x-veld:
   chain:
+    description: "Automatic creation of tokenized TEI files of downloaded txt books"
+    topic: 
+      - NLP
+      - Grammatical Annotation
+      - Universal Dependencies
+      - Tokenization
+      - Lemmatization
+      - Part Of Speech
+      - Dependency Parsing
 
 services:
   veld_step6_convert_books_to_teitok:
