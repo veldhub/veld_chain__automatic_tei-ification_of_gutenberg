@@ -53,7 +53,8 @@ Querying the data is done via a apache fuseki triplestore, since sparql can adap
 complexity and also allows for high flexibility should query requirements change at some point. For 
 this, a triplestore is started in this step. Configuration for the server can be found in
 [./data/fuseki_config/](./data/fuseki_config/). The server can be reached at 
-[http://localhost:3030](http://localhost:3030)
+[http://localhost:3030](http://localhost:3030). Note: this service needs to be kept running for step 
+3 (ingestion) and 4 (querying). After step 4, it can be shut down.
 
 Reproduce with:
 ```
