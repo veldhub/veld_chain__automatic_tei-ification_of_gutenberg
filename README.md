@@ -5,12 +5,15 @@ This repo contains several VELD chains which together download all german books 
 a veldified version of [teitok tools](https://github.com/ufal/teitok-tools) + 
 [udpipe](https://lindat.mff.cuni.cz/services/udpipe/) to automatically generate TEI files of them.
 
+## requirements
 
-# how to reproduce
-
-Technical requirements:
 - git
 - docker compose
+
+**Note: depending on the docker (compose) version, it might be necessary to swap `docker compose` 
+(newer) with `docker-compose` (older).**
+
+## how to reproduce
 
 First, clone this repo including its submodules:
 ```
@@ -21,10 +24,6 @@ There are two ways to reproduce the entirety of all chains:
 - individually: going through each following step sequentially. See 
 [individual chains](#individual-chains)
 - multichain: aggregates all individual chains into one multichain. See [multichain](#multichain)
-
-**Note: depending on the docker (compose) version, it might be necessary to swap `docker compose` 
-(newer) with `docker-compose` (older).**
-
 
 ## individual chains
 
