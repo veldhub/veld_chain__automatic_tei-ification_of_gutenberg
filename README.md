@@ -87,7 +87,7 @@ docker compose -f veld_step5_download_gutenberg_books.yaml up
 
 **[./veld_step6_convert_books_to_teitok.yaml](./veld_step6_convert_books_to_teitok.yaml)**
 
-TODO: yet to implement.
+TODO: implement.
 
 ## multichain
 
