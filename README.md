@@ -1,3 +1,5 @@
+![veld chain](https://raw.githubusercontent.com/veldhub/.github/refs/heads/main/images/symbol_chain.png)
+
 # veld_chain__automatic_tei-ification_of_gutenberg
 
 This repo contains [chain velds](https://zenodo.org/records/13322913) encapsulating several
