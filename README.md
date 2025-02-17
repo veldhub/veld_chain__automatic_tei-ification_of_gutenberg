@@ -1,7 +1,9 @@
 # ![veld chain](https://raw.githubusercontent.com/veldhub/.github/refs/heads/main/images/symbol_V_letter.png) veld_chain__automatic_tei-ification_of_gutenberg 
 
-This repo contains [chain velds](https://zenodo.org/records/13322913) encapsulating several
-processing workflows:
+This repo contains [chain velds](https://zenodo.org/records/13322913) encapsulating the entire process 
+of automatic TEI conversion of Gutenberg books.
+
+The individual processing workflows are:
 - download of entire [project gutenberg](https://www.gutenberg.org/) metadata
 - ingestion into a local triplestore for complex sparql queryies
 - query and download of all german books from gutenberg that don't have a TEI representation but a
