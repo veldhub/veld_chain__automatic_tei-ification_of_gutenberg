@@ -9,7 +9,7 @@ x-veld:
       - triplestore
 
 services:
-  veld_step4_query_books_urls:
+  veld_step_4_query_books_urls:
     extends:
       file: ./code/veld_code__apache_jena_fuseki/veld_export.yaml
       service: veld_export
@@ -20,7 +20,7 @@ services:
       in_query_file: german_books_txt_no_tei.rq
       out_file: german_books_txt_no_tei.csv
       out_format: csv
-      fuseki_server_url: http://veld_step2_run_server
+      fuseki_server_url: http://veld_step_2_run_server
       fuseki_dataset_name: gutenberg
 
 networks:

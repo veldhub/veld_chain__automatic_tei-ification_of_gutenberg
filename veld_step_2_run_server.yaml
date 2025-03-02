@@ -7,7 +7,7 @@ x-veld:
       - database
 
 services:
-  veld_step2_run_server:
+  veld_step_2_run_server:
     extends:
       file: ./code/veld_code__apache_jena_fuseki/veld_run_server.yaml
       service: veld_run_server

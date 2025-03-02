@@ -7,14 +7,14 @@ x-veld:
       - triplestore
 
 services:
-  veld_step3_import_rdf:
+  veld_step_3_import_rdf:
     extends:
       file: ./code/veld_code__apache_jena_fuseki/veld_import_rdf.yaml
       service: veld_import_rdf
     volumes:
       - ./data/gutenberg_rdf/rdf-files/cache/epub/:/veld/input/
     environment:
-      fuseki_server_url: http://veld_step2_run_server
+      fuseki_server_url: http://veld_step_2_run_server
       fuseki_dataset_name: gutenberg
 
 networks:

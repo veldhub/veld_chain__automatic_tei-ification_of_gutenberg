@@ -4,7 +4,7 @@ x-veld:
     topic: ETL
 
 services:
-  veld_step1_download_gutenberg_metadata:
+  veld_step_1_download_gutenberg_metadata:
     extends:
       file: ./code/veld_code__downloader/veld.yaml
       service: veld_downloader
